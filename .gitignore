@@ -1,12 +1,10 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
 # dependencies
-node_modules/
+/node_modules
 
 # Expo
-.expo/
-dist/
-web-build/
+/.expo/
+/dist/
+/web-build/
 
 # Native
 *.orig.*
@@ -15,9 +13,15 @@ web-build/
 *.p12
 *.key
 *.mobileprovision
+*.keystore
+*.aab
+*.apk
+*.ipa
 
 # Metro
-.metro-health-check*
+.metro/
+.happypack/
+.haste_cache/
 
 # debug
 npm-debug.*
@@ -26,10 +30,29 @@ yarn-error.*
 
 # macOS
 .DS_Store
-*.pem
+.AppleDouble
+.LSOverride
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# Android/IntelliJ
+/.idea
+.gradle
+/local.properties
+
+# fastlane
+/fastlane/report.xml
+/fastlane/Preview.html
+/fastlane/screenshots
 
 # local env files
 .env*.local
 
 # typescript
 *.tsbuildinfo
+
+# Jest
+/coverage
