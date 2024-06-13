@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Dimensions, Modal, Image, Button, A
 import { BlurView } from 'expo-blur';
 import { useFonts } from 'expo-font';
 import * as Font from 'expo-font';
+import Colors from '../constants/colors';
 import { loremIpsum } from 'lorem-ipsum';
 
 const windowHeight = Dimensions.get('window').height;
@@ -72,21 +73,21 @@ function EventDetails({ selectedEvent, eventModalVisible, onCancel }) {
                 <TouchableOpacity
                   style={{ 
                     flex: 1,
-                    backgroundColor: 'white',
+                    backgroundColor: Colors.secondaryButton,
                     alignItems: 'center',
                     justifyContent: 'center',
                     borderRadius: 10,
                   }}
                   onPress={onCancel}
                 >
-                  <Text style={{ color: '#DC143C' }}>Cancel</Text>
+                  <Text style={{ color: Colors.primaryButton }}>Cancel</Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.submitButton}>
                 <TouchableOpacity
                   style={{ 
                     flex: 1,
-                    backgroundColor: '#DC143C',
+                    backgroundColor: Colors.primaryButton,
                     alignItems: 'center',
                     justifyContent: 'center',
                     borderRadius: 10,
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Make sure this covers the screen
+    backgroundColor: Colors.modalBackground, // Make sure this covers the screen
   },
   blurView: {
     flex: 1,
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
     maxHeight: windowHeight * 0.7,
     marginBottom: 10,
     padding: 10,
-    backgroundColor: 'rgba(253, 243, 231, 1)',
+    backgroundColor: Colors.eventBackground,
     borderRadius: 10,
     alignItems: 'center',
   },
